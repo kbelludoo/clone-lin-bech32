@@ -1,0 +1,16 @@
+@RULEL:CLONE_LIN_BECH32:1.0.0
+~R{.o=oracles .c=scope}
+.o{
+  upstream="https://github.com/sipa/bech32"
+  commit="7a7d7ab158db7078a333384e0e918c90dbc42917"
+  file="ref/c/segwit_addr.c"
+  sha256="aa73529c41142d2a9fed384676910943692236eda2ec583f96a95b5283c3042d"
+  license="MIT"
+  spec="BIP-173 / BIP-350"
+  lin_open_proofs="https://github.com/kbelludoo/lin-open"
+}
+.c{
+  class="EXPERIMENTAL"
+  kernel="src/lin_bech32_polymod.lin"
+  not="full_segwit_addr_encode_decode"
+}
